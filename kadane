@@ -1,3 +1,6 @@
+<b> Kadane’s Algorithm </b>
+
+![Sample image](https://github.com/lchimmiri/algorithms-simplified/blob/master/Kadane.PNG)
 
 public static int getMaxSubarraySum(int[] array) {
 		int currentMax = Integer.MIN_VALUE;
