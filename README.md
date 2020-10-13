@@ -26,3 +26,25 @@ public int getMaxSubarraySumWithIndices(int[] array) {
 		return totalMax;
 	}
 ```
+## 2) Floyd’s cycle detection algorithm
+<pre> 
+Floyd's cycle-finding algorithm is a pointer algorithm that uses only two pointers, which move through the sequence at different speeds.
+It is also called the "tortoise and the hare algorithm"
+</pre>
+
+```
+public static <T> boolean detectLoop(SinglyLinkedList<T> list) {
+		SinglyLinkedList<T>.Node slow = list.getHeadNode();
+		SinglyLinkedList<T>.Node fast = list.getHeadNode();
+
+		while (slow != null && fast != null && fast.nextNode != null) {
+			slow = slow.nextNode; // the slow pointer will jump 1 step
+			fast = fast.nextNode.nextNode; // the fast pointer will jump 2 steps
+			// when the pointers become equal then there must be a loop
+			if (slow == fast) {
+				return true;
+			}
+		}
+		return false;
+	}
+```
