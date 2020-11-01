@@ -2,7 +2,6 @@
 ## 1) Kadane’s Algorithm
 
 ![Kadane’s image](https://github.com/lchimmiri/algorithms-simplified/blob/master/Kadane.PNG)
-
 ```
 public int getMaxSubarraySumWithIndices(int[] array) {
 		int currentMax = 0;
